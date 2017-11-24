@@ -1,0 +1,56 @@
+{
+    "name": "saritasa/simple-project",
+    "description": "simple-project",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.1",
+        "barryvdh/laravel-cors": "^0.9",
+        "dingo/api": "1.0.x@dev",
+        "laravel/framework": "5.4.*",
+        "laravel/tinker": "^1.0",
+        "predis/predis": "^1.1",
+        "saritasa/dingo-api-custom": "^1.0",
+        "saritasa/laravel-controllers": "^2.0",
+        "saritasa/laravel-middleware": "^1.0",
+        "saritasa/roles-simple": "^1.0",
+        "tymon/jwt-auth": "1.0.*@dev"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^2.4",
+        "doctrine/dbal": "^2.5",
+        "fzaninotto/faker": "^1.6",
+        "mockery/mockery": "^0.9",
+        "phpunit/phpunit": "^6.2",
+        "reliese/laravel": "^0.0.13"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "prefer-stable": true
+}
