@@ -29,3 +29,6 @@ or
 yarn run production
 ```
 - Configure the environment file
+
+# Screenshot
+![Running application](/screenshot.png?raw=true "Running application")
