@@ -1,10 +1,10 @@
-#Requirements
+# Requirements
 1. Php version >=7.1
 
 # Installation
 - Clone repository
 ```bash
-git clone ssh://gitblit.saritasa.com/simple-project/backend.git
+git clone https://github.com/Saritasa/simplephpapp.git
 ```
 - Install composer dependencies.
 - Add .env from .env.example.
